@@ -1,0 +1,10 @@
+# Dihasilkan oleh `xcodegen generate` dari project.yml — jangan commit, regenerable.
+*.xcodeproj/
+*.xcworkspace/
+
+# Xcode
+xcuserdata/
+DerivedData/
+.build/
+.swiftpm/
+*.xcuserstate
