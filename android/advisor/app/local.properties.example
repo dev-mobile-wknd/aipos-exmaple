@@ -1,0 +1,6 @@
+# Salin jadi `local.properties` (di folder yang sama, di sebelah file ini) lalu isi.
+#
+# `aipos-advisor` memanggil OpenAI langsung dengan kunci ini — cukup untuk
+# pengembangan dan demo. Untuk produksi pakai `AdvisorClient.Builder().llmProxyBaseUrl(...)`
+# yang memanggil backend sendiri, supaya kunci tidak ikut terbundel di APK.
+LLM_API_KEY=

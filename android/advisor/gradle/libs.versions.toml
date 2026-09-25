@@ -1,0 +1,33 @@
+# Version catalog — contoh domain AI / LLM (aipos-advisor).
+#
+# `kotlin`, `agp`, dan `composeBom` sengaja dipatok sekelas dengan yang dipakai untuk
+# merilis AI POS SDK (lihat CHANGELOG SDK) — kompiler Kotlin yang lebih lama
+# menolak membaca metadata artifact yang dikompilasi versi lebih baru.
+[versions]
+aipos = "0.1.1"
+kotlin = "2.3.21"
+agp = "8.13.2"
+androidxCore = "1.15.0"
+androidxActivity = "1.9.3"
+androidxLifecycle = "2.8.7"
+composeBom = "2024.10.00"
+
+[libraries]
+aipos-advisor = { module = "com.weekendinc.aipos:aipos-advisor", version.ref = "aipos" }
+
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-foundation = { module = "androidx.compose.foundation:foundation" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
+compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-material3 = { module = "androidx.compose.material3:material3" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
